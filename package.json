@@ -24,12 +24,34 @@
 				"title": "lsp-browser: add javascript to page"
 			},
 			{
-				"command": "lsp-browser.clearPage",
-				"title": "lsp-browser: remove all javascript"
+				"command": "lsp-browser.reloadPage",
+				"title": "lsp-browser: reload the page"
 			},
 			{
-				"command": "lsp-browser.completeJs",
-				"title": "lsp-browser: complete variable"
+				"command": "lsp-browser.clearPage",
+				"title": "lsp-browser: remove all javascript"
+			}
+		],
+		"configuration": [
+			{
+				"title": "lsp-browser configurations",
+				"properties": {
+					"lsp-browser.cache_timeout": {
+						"description": "cache timeout. -1 to use always use cache; 0 to never clear cache",
+						"type": "number",
+						"default": "0"
+					},
+					"lsp-browser.suggest_window": {
+						"description": "suggest variables of window variable as start",
+						"type": "boolean",
+						"default": false
+					},
+					"lsp-browser.trigger_char": {
+						"description": "character that trigger completion",
+						"type": "string",
+						"default": "."
+					}
+				}
 			}
 		]
 	},
