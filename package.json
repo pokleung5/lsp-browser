@@ -10,14 +10,26 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:lsp-browser.helloWorld"
+		"onLanguage:javascript"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "lsp-browser.helloWorld",
-				"title": "Hello World"
+				"command": "lsp-browser.useURL",
+				"title": "lsp-browser: use page for completion"
+			},
+			{
+				"command": "lsp-browser.addScript",
+				"title": "lsp-browser: add javascript to page"
+			},
+			{
+				"command": "lsp-browser.clearPage",
+				"title": "lsp-browser: remove all javascript"
+			},
+			{
+				"command": "lsp-browser.completeJs",
+				"title": "lsp-browser: complete variable"
 			}
 		]
 	},
@@ -43,6 +55,8 @@
 		"vscode-test": "^1.4.1"
 	},
 	"dependencies": {
-		"puppeteer": "^5.5.0"
+		"puppeteer": "^5.5.0",
+		"vscode-languageserver": "^7.0.0",
+		"vscode-languageserver-textdocument": "^1.0.1"
 	}
 }
